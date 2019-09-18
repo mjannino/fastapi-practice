@@ -1,5 +1,7 @@
 from fastapi import FastAPI
-from app.api.v1 import router as v1_router
+
+# this is a stinky import :/
+from server.api.v1.api import router as v1_router
 from server.core.config import config
 
 app = FastAPI(title=config.PROJECT_NAME)

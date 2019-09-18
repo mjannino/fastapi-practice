@@ -4,11 +4,11 @@ services:
   fastapi-app:
     build: 
       context: ./server
-      dockerfile: ./docker/fastapi-app/Dockerfile
+      dockerfile: ../docker/fastapi-app/Dockerfile
     container_name: fastapi-app
     command: uvicorn --reload --workers 1 --host 0.0.0.0 --port 80 main:app
-    depends_on:
-      - postgres
+    # depends_on:
+    #   - postgres
     environment:
       SOME VAR: wow
     volumes:
@@ -16,15 +16,15 @@ services:
     ports:
       - '80:80'
 
-  # Infrastructure
-  postgres:
-    image: postgres:11.5
-    environment:
-      POSTGRES_DB: fastapi-app
-      POSTGRES_USER: admin
-      DB: fastapi-app
-      DBHOST: '127.0.0.1'
-      DBPASS: ''
-      DBUSER: postgres
-    ports:
-      - '5432:5432'
+  # # Infrastructure
+  # postgres:
+  #   image: postgres:11.5
+  #   environment:
+  #     POSTGRES_DB: fastapi-app
+  #     POSTGRES_USER: admin
+  #     DB: fastapi-app
+  #     DBHOST: '127.0.0.1'
+  #     DBPASS: ''
+  #     DBUSER: postgres
+  #   ports:
+  #     - '5432:5432'
