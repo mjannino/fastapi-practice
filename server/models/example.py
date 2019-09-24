@@ -7,5 +7,9 @@ class ExampleEntityBase(BaseModel):
     bio: Optional[str] = ""
     website: Optional[UrlStr] = None
 
-class ExampleEntity(ExampleEntityBase):
+class ExampleEntityV1(ExampleEntityBase):
     additional_field: str
+
+
+class ExampleEntityV2(ExampleEntityBase):
+    breaking_change_field: str
