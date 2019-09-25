@@ -2,7 +2,7 @@ DOC_TYPE=html
 CMD=bash
 
 build:
-	docker-compose build fastapi-app 
+	docker-compose build fastapi-app
 
 app.logs:
 	docker logs -f fastapi-app
