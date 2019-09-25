@@ -15,3 +15,6 @@ stop:
 
 rebuild-all:
 	docker-compose down && docker-compose build && docker-compose up -d
+
+clean:
+	docker container prune -f && docker image prune -f
