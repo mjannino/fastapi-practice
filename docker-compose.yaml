@@ -9,8 +9,8 @@ services:
     command: uvicorn --reload --workers 1 --host 0.0.0.0 --port 80 main:app
     depends_on:
       - postgres
-    environment:
-      SOME VAR: wow
+    # environment:
+    #   SOME VAR: wow
     volumes:
       - ./server:/opt/fastapi-app/server
     ports:

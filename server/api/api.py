@@ -1,12 +1,12 @@
 from fastapi import APIRouter
 
-from server.common.config import config
+from common.config import config
 # maybe enforce a name convention to avoid aliasing?
-from server.api.endpoints.run import (
+from api.endpoints.run import (
     run_v1, 
     run_v2
 )
-from server.api.endpoints.walk import (
+from api.endpoints.walk import (
     walk_v1, 
     walk_v2
 )

@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from server.schemas.example import ExampleEntityV1, ExampleEntityV2
-from server.common.config import config
+from schemas.example import ExampleEntityV1, ExampleEntityV2
+from common.config import config
 
 run_v1 = APIRouter()
 run_v2 = APIRouter()

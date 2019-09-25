@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from server.common.config import config
+from common.config import config
 
 engine = create_engine(config.DATABASE_CONN_STRING)
 
