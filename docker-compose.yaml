@@ -4,7 +4,7 @@ services:
   fastapi-app:
     build: 
       context: ./server
-      dockerfile: ../docker/fastapi-app/Dockerfile
+      dockerfile: ./Dockerfile
     container_name: fastapi-app
     command: uvicorn --reload --workers 1 --host 0.0.0.0 --port 80 main:app
     depends_on:

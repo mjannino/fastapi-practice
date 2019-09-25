@@ -6,6 +6,7 @@ from server.common.config import config
 run_v1 = APIRouter()
 run_v2 = APIRouter()
 
+
 @run_v1.get("/run", response_model=ExampleEntityV1, tags=["run"])
 def get_run_information_v1():
     return ExampleEntityV1(

@@ -4,14 +4,17 @@ CMD=bash
 build:
 	docker-compose build fastapi-app
 
-app.logs:
-	docker logs -f fastapi-app
-
 start:
 	docker-compose up -d
 
 stop:
 	docker-compose down
+
+app.logs:
+	docker logs -f fastapi-app
+
+app.shell:
+	@docker exec -it inquisitor /bin/bash
 
 rebuild-all:
 	docker-compose down && docker-compose build && docker-compose up -d
